@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_utils_reverse(t *testing.T) {
+func Test_utils_reverseString(t *testing.T) {
 	t.Run("success", func(t *testing.T) {
-		got := reverse("abc")
+		got := reverseString("abc")
 		assert.Equal(t, "cba", got)
 	})
 }
