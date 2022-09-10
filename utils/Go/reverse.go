@@ -14,9 +14,13 @@ func reverseString(s string) string {
 // [1,2,3] => [3,2,1]
 func reverseIntArr(arr []int) []int {
 	lenArr := len(arr)
+	if lenArr == 1 {
+		return arr
+	}
+
 	arr2 := make([]int, lenArr)
-	for i := 0; i < lenArr/2; i++ {
-		arr2[i], arr2[lenArr-i-1] = arr[lenArr-i-1], arr[i]
+	for i := 0; i < lenArr-1; i++ {
+		arr2[i], arr2[lenArr-1-i] = arr[lenArr-1-i], arr[i]
 	}
 	return arr2
 }
