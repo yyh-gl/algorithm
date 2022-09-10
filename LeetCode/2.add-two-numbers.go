@@ -55,7 +55,7 @@ type ListNode2 struct {
 	Next *ListNode2
 }
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func addTwoNumbers(l1 *ListNode2, l2 *ListNode2) *ListNode2 {
 	tmp := make([]int, 0, 101)
 	kuriage := false
 	for l1 != nil || l2 != nil {
@@ -94,9 +94,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		tmp = append(tmp, 1)
 	}
 
-	var node, next *ListNode
+	var node, next *ListNode2
 	for i := len(tmp) - 1; i >= 0; i-- {
-		node = &ListNode{
+		node = &ListNode2{
 			Val:  tmp[i],
 			Next: next,
 		}
